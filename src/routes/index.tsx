@@ -130,7 +130,7 @@ function Index() {
           alt="Ilustração em gravura da Matriz de Santo Antônio, em Tiradentes"
           width={1408}
           height={1008}
-          className="mx-auto mt-10 w-full max-w-2xl"
+          className="mx-auto mt-10 w-full max-w-2xl [mask-image:radial-gradient(ellipse_75%_80%_at_center,black_60%,transparent_100%)]"
         />
       </section>
 
