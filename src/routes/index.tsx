@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
 import igrejaFoto from "@/assets/tiradentes.jpg.asset.json";
 import igrejaIlustracao from "@/assets/igreja-ilustracao.png";
-import divisor from "@/assets/divisor-botanico.png";
+import divisor from "@/assets/divisor-ornamental.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -61,13 +61,13 @@ function useCountdown() {
 function Divisor({ className = "" }: { className?: string }) {
   return (
     <img
-      src={divisor}
+      src={divisor.url}
       alt=""
       aria-hidden
       loading="lazy"
-      width={1200}
-      height={512}
-      className={`mx-auto w-64 opacity-90 md:w-80 ${className}`}
+      width={1600}
+      height={300}
+      className={`mx-auto w-72 max-w-full md:w-96 ${className}`}
     />
   );
 }
