@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
 import igrejaFoto from "@/assets/tiradentes.jpg.asset.json";
 import igrejaIlustracao from "@/assets/igreja-ilustracao.png";
-import divisor from "@/assets/divisor-botanico.png";
+import divisor from "@/assets/divisor-ornamental.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
