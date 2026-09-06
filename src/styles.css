@@ -2,6 +2,14 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "TAN Pearl";
+  src: url("/__l5e/assets-v1/e66dd003-b7aa-470b-8867-84b57d4d7eca/TAN-PEARL-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -70,7 +78,7 @@
   --color-amarelo-mostarda: var(--amarelo-mostarda);
   --color-amarelo-dourado: var(--amarelo-dourado);
   --font-serif: "Cormorant Garamond", "Georgia", serif;
-  --font-script: "Pinyon Script", cursive;
+  --font-script: "TAN Pearl", "Cormorant Garamond", "Georgia", serif;
   --font-title: "TAN Pearl", "Cormorant Garamond", "Georgia", serif;
 }
 
