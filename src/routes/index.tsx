@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
-import monograma from "@/assets/monograma.png.asset.json";
+import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
 import igrejaFoto from "@/assets/tiradentes.jpg.asset.json";
 import igrejaIlustracao from "@/assets/igreja-ilustracao.png";
 import divisor from "@/assets/divisor-botanico.png";
@@ -78,7 +78,7 @@ function SectionTitle({ title, script }: { title: string; script?: string }) {
       {script && (
         <p className="font-script text-3xl text-primary md:text-4xl">{script}</p>
       )}
-      <h2 className="mt-1 font-serif text-2xl font-medium uppercase tracking-[0.35em] text-cafe md:text-3xl">
+      <h2 className="mt-1 font-title text-2xl font-medium uppercase tracking-[0.2em] text-cafe md:text-3xl">
         {title}
       </h2>
       <div className="mx-auto mt-4 h-px w-24 bg-primary/60" />
@@ -119,7 +119,7 @@ function Index() {
 
       {/* Hero */}
       <section className="px-4 pt-16 text-center md:pt-24">
-        <h1 className="font-script text-6xl leading-tight text-cafe md:text-8xl">
+        <h1 className="font-title text-5xl leading-tight text-cafe md:text-7xl">
           Carol &amp; Plínio
         </h1>
         <p className="mt-6 text-lg tracking-[0.4em] text-cafe md:text-xl">
@@ -183,7 +183,7 @@ function Index() {
         <SectionTitle script="O grande dia" title="O Dia" />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="border border-border bg-card p-8 text-center">
-            <p className="font-script text-3xl text-primary">Cerimônia</p>
+            <p className="font-title text-3xl text-primary">Cerimônia</p>
             <p className="mt-4 text-lg leading-relaxed">
               16 de outubro de 2027, às 16h
             </p>
@@ -194,7 +194,7 @@ function Index() {
             </p>
           </div>
           <div className="border border-border bg-card p-8 text-center">
-            <p className="font-script text-3xl text-primary">Recepção</p>
+            <p className="font-title text-3xl text-primary">Recepção</p>
             <p className="mt-4 text-lg leading-relaxed">
               Após a cerimônia, celebraremos juntos em Tiradentes.
             </p>
@@ -255,24 +255,23 @@ function Index() {
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             {[
-              { c: "#F4EFE4", n: "Marfim" },
-              { c: "#C69A55", n: "Amarelo da Igreja" },
-              { c: "#74775D", n: "Verde Oliva" },
-              { c: "#5A4A3D", n: "Marrom Café" },
-              { c: "#A5684F", n: "Terracota" },
-              { c: "#8A8880", n: "Cinza Pedra" },
+              { classe: "bg-amarelo-palha", n: "Palha" },
+              { classe: "bg-amarelo-manteiga", n: "Manteiga" },
+              { classe: "bg-amarelo-mel", n: "Mel" },
+              { classe: "bg-amarelo-ocre", n: "Ocre" },
+              { classe: "bg-amarelo-mostarda", n: "Mostarda" },
+              { classe: "bg-amarelo-dourado", n: "Dourado" },
             ].map((s) => (
               <div key={s.n} className="text-center">
                 <span
-                  className="block h-16 w-16 rounded-full border border-border"
-                  style={{ backgroundColor: s.c }}
+                  className={`block h-16 w-16 rounded-full border border-border ${s.classe}`}
                 />
                 <span className="mt-2 block max-w-20 text-xs text-muted-foreground">{s.n}</span>
               </div>
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            Nossa paleta, inspirada nas cores de Tiradentes — sintam-se à vontade para se inspirar nela.
+            Cores das madrinhas — uma seleção de tons de amarelo para celebrar com alegria.
           </p>
         </div>
       </section>
@@ -297,7 +296,7 @@ function Index() {
 
       {/* Footer */}
       <footer className="border-t border-border px-4 py-10 text-center">
-        <p className="font-script text-3xl text-primary">Carol &amp; Plínio</p>
+        <p className="font-title text-3xl text-primary">Carol &amp; Plínio</p>
         <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           16 de outubro de 2027 · Tiradentes, Minas Gerais
         </p>
