@@ -63,8 +63,15 @@
   --color-terracota: var(--terracota);
   --color-pedra: var(--pedra);
   --color-cafe: var(--cafe);
+  --color-amarelo-palha: var(--amarelo-palha);
+  --color-amarelo-manteiga: var(--amarelo-manteiga);
+  --color-amarelo-mel: var(--amarelo-mel);
+  --color-amarelo-ocre: var(--amarelo-ocre);
+  --color-amarelo-mostarda: var(--amarelo-mostarda);
+  --color-amarelo-dourado: var(--amarelo-dourado);
   --font-serif: "Cormorant Garamond", "Georgia", serif;
   --font-script: "Pinyon Script", cursive;
+  --font-title: "TAN Pearl", "Cormorant Garamond", "Georgia", serif;
 }
 
 :root {
@@ -93,6 +100,12 @@
   --terracota: oklch(0.55 0.09 45);
   --pedra: oklch(0.6 0.012 75); /* #8A8880 cinza pedra */
   --cafe: oklch(0.4 0.03 60); /* #5A4A3D marrom café */
+  --amarelo-palha: oklch(0.91 0.075 94);
+  --amarelo-manteiga: oklch(0.85 0.115 92);
+  --amarelo-mel: oklch(0.77 0.145 84);
+  --amarelo-ocre: oklch(0.69 0.145 76);
+  --amarelo-mostarda: oklch(0.62 0.135 78);
+  --amarelo-dourado: oklch(0.72 0.13 86);
   --chart-1: oklch(0.695 0.108 76);
   --chart-2: oklch(0.53 0.045 112);
   --chart-3: oklch(0.55 0.09 45);
