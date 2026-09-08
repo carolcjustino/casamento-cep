@@ -138,18 +138,34 @@ function Index() {
       <section id="boas-vindas" className="mx-auto max-w-2xl scroll-mt-8 px-6 py-20 text-center">
         <SectionTitle script="Seja bem-vindo!" title="Boas-vindas" />
         <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/90 md:text-xl">
-          <p>É uma alegria enorme ter você aqui.</p>
+          <p>Que bom ter você por aqui! 🤍</p>
           <p>
-            Somos Carol e Plínio, e Deus nos presenteou com uma história construída
-            com leveza, parceria, muito amor e fé.
+            Se tem uma coisa que combina com a nossa história, é gostar de lugares
+            que têm história para contar. A gente gosta de museus, de andar sem
+            pressa por uma cidade nova, de descobrir seus cantinhos e,
+            principalmente, de criar nossas próprias histórias pelo caminho.
           </p>
           <p>
-            Criamos este espaço para compartilhar um pouco dessa fase tão especial:
-            detalhes importantes, informações, programações, novidades e tudo o que
-            estamos preparando com muito carinho para o nosso grande dia — na
-            histórica e encantadora Tiradentes, em Minas Gerais.
+            Por isso, Tiradentes não poderia ser um lugar qualquer para o nosso
+            casamento. É uma cidade que sempre foi muito especial para nós e
+            que, de diferentes formas, faz parte da nossa história.
           </p>
-          <p className="text-primary">Obrigada por fazer parte da nossa história.</p>
+          <p>
+            Agora, chegou a vez de escrever mais um capítulo por lá — dessa vez,
+            cercados pelas pessoas que fazem parte da nossa vida e que queremos
+            ter por perto nesse momento tão importante.
+          </p>
+          <p>
+            Por aqui, vamos reunir tudo o que você precisa saber para o nosso
+            grande dia: programação, informações, dicas para aproveitar
+            Tiradentes e, claro, algumas novidades ao longo dessa contagem
+            regressiva.
+          </p>
+          <p className="text-primary">
+            Mal podemos esperar para viver esse dia com vocês.
+            <br />
+            Nos vemos em Tiradentes! ✨
+          </p>
         </div>
         <Divisor className="mt-14" />
       </section>
