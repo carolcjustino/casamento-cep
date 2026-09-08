@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
 import igrejaFoto from "@/assets/tiradentes.jpg.asset.json";
 import igrejaIlustracao from "@/assets/igreja-ilustracao.png";
-import divisor from "@/assets/divisor-ornamental.png.asset.json";
+import divisor from "@/assets/separador-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -65,9 +65,9 @@ function Divisor({ className = "" }: { className?: string }) {
       alt=""
       aria-hidden
       loading="lazy"
-      width={1600}
-      height={300}
-      className={`mx-auto w-72 max-w-full md:w-96 ${className}`}
+      width={1200}
+      height={180}
+      className={`mx-auto w-80 max-w-[90%] md:w-[28rem] ${className}`}
     />
   );
 }
