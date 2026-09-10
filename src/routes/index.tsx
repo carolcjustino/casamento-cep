@@ -1,4 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
+import * as Tabs from "@radix-ui/react-tabs";
+import {
+  Beer,
+  Coffee,
+  Heart,
+  Landmark,
+  MapPin,
+  Palette,
+  ShoppingBag,
+  Sparkles,
+  TrainFront,
+  Trees,
+  UtensilsCrossed,
+  Wine,
+  type LucideIcon,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
@@ -35,9 +51,149 @@ const NAV = [
   { label: "Sejam bem-vindos", href: "#boas-vindas" },
   { label: "O Dia", href: "#o-dia" },
   { label: "Tiradentes", href: "#tiradentes" },
+  { label: "Fim de semana", href: "#fim-de-semana" },
   { label: "Hospedagem", href: "#hospedagem" },
   { label: "Dress Code", href: "#dress-code" },
   { label: "RSVP", href: "#rsvp" },
+];
+
+type WeekendItem = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  highlight?: boolean;
+};
+
+const WEEKEND_DAYS: Record<
+  "sexta" | "sabado" | "domingo",
+  { eyebrow: string; intro: string; items: WeekendItem[] }
+> = {
+  sexta: {
+    eyebrow: "Chegue, desacelere e conheça a cidade.",
+    intro:
+      "Tiradentes é daquelas cidades que pedem para ser exploradas sem pressa. Aproveite a sexta-feira para caminhar pelo Centro Histórico, conhecer as lojinhas, ateliês e casarões e descobrir os cantinhos da cidade.",
+    items: [
+      {
+        title: "Para começar o dia",
+        description:
+          "Se chegar cedo, algumas boas opções para um café são Vertentes Café e Torra, Marcas Mineiras ou Casa do Sino. Para algo mais simples e bem mineiro, vale também passar em uma das padarias tradicionais da cidade.",
+        icon: Coffee,
+      },
+      {
+        title: "Arte & história",
+        description:
+          "Reserve algumas horas para conhecer o Museu de Sant'Ana, o Museu da Liturgia ou entrar nas galerias e ateliês espalhados pelo centro.",
+        icon: Palette,
+      },
+      {
+        title: "Passeio pelo centro",
+        description:
+          "Depois, é hora de andar sem roteiro: Rua Direita, Largo das Forras, Rua da Câmara e as pequenas lojas de artesanato e design.",
+        icon: ShoppingBag,
+      },
+      {
+        title: "À noite",
+        description:
+          "Escolha um restaurante para um jantar especial ou aproveite um dos bares da cidade para tomar um vinho, uma cerveja artesanal ou um drink.",
+        icon: Wine,
+      },
+    ],
+  },
+  sabado: {
+    eyebrow: "Uma manhã tranquila antes do nosso grande momento. ♡",
+    intro:
+      "A manhã de sábado é livre para aproveitar Tiradentes com calma — mas recomendamos não programar muita coisa. O ideal é curtir a cidade, almoçar cedo e reservar a tarde para se arrumar.",
+    items: [
+      {
+        title: "Café da manhã",
+        description:
+          "Aproveite o café da manhã da pousada ou experimente algum dos cafés da cidade. Padaria Padre Toledo, Marcas Mineiras e Vertentes Café e Torra são algumas opções para colocar na lista.",
+        icon: Coffee,
+      },
+      {
+        title: "Uma manhã para passear",
+        description:
+          "Uma caminhada pelo Centro Histórico, algumas comprinhas ou uma visita rápida a um museu já são suficientes para aproveitar a manhã.",
+        icon: Trees,
+      },
+      {
+        title: "Almoço",
+        description:
+          "Escolha um almoço leve e sem pressa — afinal, o compromisso mais importante do dia começa às 16h.",
+        icon: UtensilsCrossed,
+      },
+      {
+        title: "16h — Nosso casamento",
+        description:
+          "Matriz de Santo Antônio. Depois da cerimônia, seguimos para uma recepção em restaurante, para celebrar juntos, brindar e aproveitar a noite com calma.",
+        icon: Heart,
+        highlight: true,
+      },
+    ],
+  },
+  domingo: {
+    eyebrow: "Um último café, um último passeio e até a próxima.",
+    intro: "Depois do nosso casamento, o domingo é perfeito para desacelerar.",
+    items: [
+      {
+        title: "Café da manhã",
+        description:
+          "Aproveite o café da manhã da pousada ou descubra mais um café da cidade. Se quiser algo rápido e bem mineiro, vale experimentar um pão de queijo ou um doce tradicional antes de pegar a estrada.",
+        icon: Coffee,
+      },
+      {
+        title: "Maria Fumaça",
+        description:
+          "Para quem tiver algumas horas disponíveis, o passeio de Maria Fumaça entre Tiradentes e São João del-Rei é uma das experiências clássicas da região.",
+        icon: TrainFront,
+      },
+      {
+        title: "Ou... Bichinho",
+        description:
+          "Outra opção é pegar a estrada até Bichinho, um pequeno distrito conhecido pelos ateliês, artesanato, restaurantes e pela produção de peças mineiras.",
+        icon: Palette,
+      },
+      {
+        title: "Almoço de despedida",
+        description:
+          "Antes de voltar para casa, aproveite para fazer aquele último almoço mineiro sem pressa.",
+        icon: UtensilsCrossed,
+      },
+    ],
+  },
+};
+
+const FAVORITES: WeekendItem[] = [
+  {
+    title: "Para tomar café",
+    description:
+      "Vertentes Café e Torra — café especial. Marcas Mineiras — café e lembranças. Casa do Sino — ambiente charmoso. Padaria Padre Toledo e Padaria Mister Pão — opções simples e tradicionais.",
+    icon: Coffee,
+  },
+  {
+    title: "Arte & história",
+    description:
+      "Museu de Sant'Ana, Museu da Liturgia, galerias e ateliês do Centro Histórico e um passeio pelo conjunto arquitetônico de Tiradentes.",
+    icon: Landmark,
+  },
+  {
+    title: "Para jantar",
+    description:
+      "Tiradentes tem uma gastronomia muito forte e vale fazer reserva com antecedência. Entre os restaurantes com boas avaliações estão Tragaluz, O Provençal, Angatu e Restaurante Esplendor.",
+    icon: UtensilsCrossed,
+  },
+  {
+    title: "Cerveja ou drink",
+    description:
+      "Para algo mais descontraído, vale conhecer 50 Tons de Malte, Duquim ou algum dos bares ao redor do Centro Histórico.",
+    icon: Beer,
+  },
+  {
+    title: "Para comprar",
+    description:
+      "A melhor dica é caminhar pelo centro e entrar nas lojas de decoração, artesanato e peças de artistas locais que chamarem sua atenção.",
+    icon: ShoppingBag,
+  },
 ];
 
 function useCountdown() {
@@ -83,6 +239,96 @@ function SectionTitle({ title, script }: { title: string; script?: string }) {
       </h2>
       <div className="mx-auto mt-4 h-px w-24 bg-primary/60" />
     </div>
+  );
+}
+
+function WeekendCards({ items }: { items: WeekendItem[] }) {
+  return (
+    <div className="mt-8 grid gap-x-10 gap-y-0 md:grid-cols-2">
+      {items.map(({ title, description, icon: Icon, highlight }) => (
+        <article
+          key={title}
+          className={`group relative flex gap-4 border-b py-6 transition-colors duration-300 ${
+            highlight
+              ? "border-primary bg-primary/10 px-5 md:col-span-2 md:mx-auto md:w-[calc(50%-1.25rem)]"
+              : "border-border"
+          }`}
+        >
+          <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+            <Icon aria-hidden="true" size={18} strokeWidth={1.5} />
+          </div>
+          <div>
+            <h3 className="font-title text-xl text-cafe">{title}</h3>
+            {highlight && (
+              <p className="mt-1 flex items-center gap-1 text-xs uppercase tracking-[0.16em] text-primary">
+                <MapPin aria-hidden="true" size={13} /> Tiradentes, MG
+              </p>
+            )}
+            <p className="mt-2 text-base leading-relaxed text-foreground/85">
+              {description}
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function WeekendGuide() {
+  return (
+    <Tabs.Root defaultValue="sexta" className="mt-10">
+      <Tabs.List
+        aria-label="Escolha um dia do fim de semana"
+        className="mx-auto grid max-w-2xl grid-cols-2 border-y border-primary/40 sm:grid-cols-4"
+      >
+        {[
+          ["sexta", "Sexta"],
+          ["sabado", "Sábado"],
+          ["domingo", "Domingo"],
+          ["favoritos", "Favoritos"],
+        ].map(([value, label]) => (
+          <Tabs.Trigger
+            key={value}
+            value={value}
+            className="relative min-h-12 px-3 py-3 text-sm uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-cafe data-[state=active]:bg-primary/15 data-[state=active]:text-cafe data-[state=active]:after:absolute data-[state=active]:after:inset-x-4 data-[state=active]:after:bottom-0 data-[state=active]:after:h-px data-[state=active]:after:bg-primary"
+          >
+            {label}
+          </Tabs.Trigger>
+        ))}
+      </Tabs.List>
+
+      {(Object.entries(WEEKEND_DAYS) as [keyof typeof WEEKEND_DAYS, (typeof WEEKEND_DAYS)[keyof typeof WEEKEND_DAYS]][]).map(
+        ([day, content]) => (
+          <Tabs.Content
+            key={day}
+            value={day}
+            className="animate-in fade-in-0 slide-in-from-bottom-2 duration-500 motion-reduce:animate-none"
+          >
+            <div className="mx-auto mt-10 max-w-2xl text-center">
+              <p className="font-title text-2xl text-primary md:text-3xl">{content.eyebrow}</p>
+              <p className="mt-4 text-lg leading-relaxed text-foreground/90">{content.intro}</p>
+            </div>
+            <WeekendCards items={content.items} />
+          </Tabs.Content>
+        ),
+      )}
+
+      <Tabs.Content
+        value="favoritos"
+        className="animate-in fade-in-0 slide-in-from-bottom-2 duration-500 motion-reduce:animate-none"
+      >
+        <div className="mx-auto mt-10 max-w-2xl text-center">
+          <p className="font-title text-2xl text-primary md:text-3xl">
+            Nossos cantinhos preferidos
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-foreground/90">
+            Algumas sugestões para saborear, descobrir e levar um pedacinho de
+            Tiradentes com você.
+          </p>
+        </div>
+        <WeekendCards items={FAVORITES} />
+      </Tabs.Content>
+    </Tabs.Root>
   );
 }
 
@@ -247,6 +493,45 @@ function Index() {
           </p>
         </div>
         <Divisor className="mt-14" />
+      </section>
+
+      {/* Fim de semana */}
+      <section
+        id="fim-de-semana"
+        className="scroll-mt-8 overflow-hidden px-5 py-20 md:py-24"
+      >
+        <div className="mx-auto max-w-5xl">
+          <SectionTitle script="Viva a cidade com a gente" title="Um fim de semana em Tiradentes" />
+          <p className="mx-auto mt-7 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
+            Preparamos um roteiro leve para vocês aproveitarem cada momento na
+            cidade — antes e depois do nosso sim.
+          </p>
+          <WeekendGuide />
+
+          <div className="relative mx-auto mt-16 max-w-3xl border-y border-primary/50 px-6 py-10 text-center md:px-12">
+            <Sparkles
+              aria-hidden="true"
+              className="mx-auto text-primary"
+              size={24}
+              strokeWidth={1.25}
+            />
+            <p className="mt-3 font-title text-3xl text-cafe">Uma última dica</p>
+            <p className="mt-5 text-xl italic leading-relaxed text-primary">
+              Não tente conhecer tudo.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-foreground/90">
+              Tiradentes é uma cidade para andar sem pressa, tomar café demorado,
+              entrar em uma lojinha inesperada, parar para um vinho e observar os
+              casarões.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-foreground/90">
+              Aproveitem o fim de semana, porque foi justamente esse clima de
+              história, arte e cidade pequena que fez Tiradentes ser tão especial
+              para nós.
+            </p>
+          </div>
+          <Divisor className="mt-14" />
+        </div>
       </section>
 
       {/* Hospedagem */}
