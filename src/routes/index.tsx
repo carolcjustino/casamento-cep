@@ -40,6 +40,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -275,18 +276,20 @@ function WeekendCards({ items }: { items: WeekendItem[] }) {
 }
 
 function WeekendGuide() {
+  const tabs = [
+    ["sexta", "Sexta"],
+    ["sabado", "Sábado"],
+    ["domingo", "Domingo"],
+    ["favoritos", "Favoritos"],
+  ] as const;
+
   return (
     <Tabs.Root defaultValue="sexta" className="mt-10">
       <Tabs.List
         aria-label="Escolha um dia do fim de semana"
         className="mx-auto grid max-w-2xl grid-cols-2 border-y border-primary/40 sm:grid-cols-4"
       >
-        {[
-          ["sexta", "Sexta"],
-          ["sabado", "Sábado"],
-          ["domingo", "Domingo"],
-          ["favoritos", "Favoritos"],
-        ].map(([value, label]) => (
+        {tabs.map(([value, label]) => (
           <Tabs.Trigger
             key={value}
             value={value}
