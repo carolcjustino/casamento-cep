@@ -264,19 +264,38 @@ function Index() {
       <section id="dress-code" className="scroll-mt-8 bg-secondary/60 px-4 py-20">
         <div className="mx-auto max-w-3xl">
           <SectionTitle script="Trajes" title="Dress Code" />
-          <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
-            Traje esporte fino. Lembrando que a cerimônia acontece em uma igreja
-            histórica com ruas de pedra — recomendamos sapatos confortáveis para
-            caminhar pelas ladeiras de Tiradentes.
-          </p>
+          <div className="mx-auto mt-8 max-w-2xl space-y-4 text-center text-lg leading-relaxed text-foreground/90">
+            <p>Para celebrar esse dia com a gente, sugerimos o traje esporte fino.</p>
+            <p>
+              Como nosso casamento acontece em Tiradentes, em uma igreja histórica e
+              cercado pelas charmosas ruas de pedra da cidade, recomendamos escolher
+              sapatos confortáveis, especialmente para quem pretende caminhar pelas
+              ladeiras e pelo centro histórico.
+            </p>
+            <p>
+              Em outubro, o clima costuma ser bastante agradável, com temperaturas que
+              historicamente ficam em torno de 16 °C a 25 °C. Como a cerimônia será às
+              16h e a temperatura pode cair ao longo da noite, vale considerar uma
+              pashmina, echarpe, blazer ou outra peça leve para complementar o look.
+            </p>
+            <p>
+              Outubro também marca o início de um período mais chuvoso em Tiradentes.
+              Por isso, recomendamos estar preparado para uma eventual chuva — e,
+              principalmente, escolher calçados que sejam confortáveis e seguros para
+              as pedras das ruas históricas.
+            </p>
+            <p>
+              Nosso conselho: venha elegante, mas confortável. Afinal, queremos que
+              vocês aproveitem cada momento, caminhem, dancem e curtam Tiradentes com
+              a gente.
+            </p>
+          </div>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             {[
-              { classe: "bg-amarelo-palha", n: "Palha" },
               { classe: "bg-amarelo-manteiga", n: "Manteiga" },
               { classe: "bg-amarelo-mel", n: "Mel" },
               { classe: "bg-amarelo-ocre", n: "Ocre" },
               { classe: "bg-amarelo-mostarda", n: "Mostarda" },
-              { classe: "bg-amarelo-dourado", n: "Dourado" },
             ].map((s) => (
               <div key={s.n} className="text-center">
                 <span
