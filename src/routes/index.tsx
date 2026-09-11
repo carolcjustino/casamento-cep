@@ -513,10 +513,12 @@ function Index() {
           <div className="border border-border bg-card p-8 text-center">
             <p className="font-title text-3xl text-primary">Recepção</p>
             <p className="mt-4 text-lg leading-relaxed">
-              Após a cerimônia, celebraremos juntos em Tiradentes.
+              Após a cerimônia, seguiremos para um restaurante em Tiradentes
+              para celebrarmos juntos.
             </p>
             <p className="mt-2 text-lg leading-relaxed text-muted-foreground">
-              Local e horário em breve.
+              Será um momento de boa comida, brinde e conversa — sem festa com
+              pista de dança. Local e horário em breve.
             </p>
           </div>
         </div>
