@@ -77,7 +77,7 @@ const WEEKEND_DAYS: Record<
       {
         title: "Para começar o dia",
         description:
-          "Se chegar cedo, algumas boas opções para um café são Vertentes Café e Torra, Marcas Mineiras ou Casa do Sino. Para algo mais simples e bem mineiro, vale também passar em uma das padarias tradicionais da cidade.",
+          "Se chegar cedo, algumas boas opções para um café são Jane's Apple, Vertentes Café e Torra, Marcas Mineiras ou Casa do Sino. Para algo mais simples e bem mineiro, vale também passar em uma das padarias tradicionais da cidade.",
         icon: Coffee,
       },
       {
@@ -108,7 +108,7 @@ const WEEKEND_DAYS: Record<
       {
         title: "Café da manhã",
         description:
-          "Aproveite o café da manhã da pousada ou experimente algum dos cafés da cidade. Padaria Padre Toledo, Marcas Mineiras e Vertentes Café e Torra são algumas opções para colocar na lista.",
+          "Aproveite o café da manhã da pousada ou experimente algum dos cafés da cidade. Jane's Apple, Padaria Padre Toledo, Marcas Mineiras e Vertentes Café e Torra são algumas opções para colocar na lista.",
         icon: Coffee,
       },
       {
@@ -168,7 +168,7 @@ const FAVORITES: WeekendItem[] = [
   {
     title: "Para tomar café",
     description:
-      "Vertentes Café e Torra — café especial. Marcas Mineiras — café e lembranças. Casa do Sino — ambiente charmoso. Padaria Padre Toledo e Padaria Mister Pão — opções simples e tradicionais.",
+      "Jane's Apple — café e bolos deliciosos em ambiente charmoso. Vertentes Café e Torra — café especial. Marcas Mineiras — café e lembranças. Casa do Sino — ambiente charmoso. Padaria Padre Toledo e Padaria Mister Pão — opções simples e tradicionais.",
     icon: Coffee,
   },
   {
