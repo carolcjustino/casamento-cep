@@ -243,34 +243,86 @@ function SectionTitle({ title, script }: { title: string; script?: string }) {
   );
 }
 
-function WeekendCards({ items }: { items: WeekendItem[] }) {
+function WeekendItemCard({
+  title,
+  description,
+  icon: Icon,
+}: {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}) {
   return (
-    <div className="mt-8 grid gap-x-10 gap-y-0 md:grid-cols-2">
-      {items.map(({ title, description, icon: Icon, highlight }) => (
-        <article
-          key={title}
-          className={`group relative flex gap-4 border-b py-6 transition-colors duration-300 ${
-            highlight
-              ? "border-primary bg-primary/10 px-5 md:col-span-2 md:mx-auto md:w-[calc(50%-1.25rem)]"
-              : "border-border"
-          }`}
-        >
-          <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-            <Icon aria-hidden="true" size={18} strokeWidth={1.5} />
-          </div>
-          <div>
-            <h3 className="font-title text-xl text-cafe">{title}</h3>
-            {highlight && (
-              <p className="mt-1 flex items-center gap-1 text-xs uppercase tracking-[0.16em] text-primary">
-                <MapPin aria-hidden="true" size={13} /> Tiradentes, MG
-              </p>
-            )}
-            <p className="mt-2 text-base leading-relaxed text-foreground/85">
-              {description}
-            </p>
-          </div>
-        </article>
-      ))}
+    <article className="group flex gap-4 border-b border-border py-6 transition-colors duration-300">
+      <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+        <Icon aria-hidden="true" size={18} strokeWidth={1.5} />
+      </div>
+      <div>
+        <h3 className="font-title text-xl text-cafe">{title}</h3>
+        <p className="mt-2 text-base leading-relaxed text-foreground/85">
+          {description}
+        </p>
+      </div>
+    </article>
+  );
+}
+
+function WeekendFeaturedCard({
+  title,
+  description,
+  icon: Icon,
+}: {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}) {
+  return (
+    <article className="relative overflow-hidden border-y border-primary/60 bg-primary/[0.08] px-6 py-8 text-center md:px-12 md:py-10">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/80 to-transparent" />
+      <div className="mx-auto flex max-w-2xl flex-col items-center">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full border border-primary/60 bg-background/60 text-primary">
+          <Icon aria-hidden="true" size={26} strokeWidth={1.3} />
+        </div>
+        <h3 className="mt-5 font-title text-2xl text-cafe md:text-3xl">{title}</h3>
+        <p className="mt-2 flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-primary">
+          <MapPin aria-hidden="true" size={14} /> Matriz de Santo Antônio · Tiradentes, MG
+        </p>
+        <p className="mt-4 max-w-xl text-base leading-relaxed text-foreground/85 md:text-lg">
+          {description}
+        </p>
+      </div>
+    </article>
+  );
+}
+
+function WeekendCards({ items }: { items: WeekendItem[] }) {
+  const featured = items.filter((item) => item.highlight);
+  const regular = items.filter((item) => !item.highlight);
+
+  const gridCols =
+    regular.length === 3
+      ? "md:grid-cols-3"
+      : regular.length === 4
+        ? "md:grid-cols-2"
+        : "md:grid-cols-2";
+
+  return (
+    <div className="mt-8 space-y-8">
+      {regular.length > 0 && (
+        <div className={`grid gap-6 ${gridCols}`}>
+          {regular.map((item) => (
+            <WeekendItemCard key={item.title} {...item} />
+          ))}
+        </div>
+      )}
+
+      {featured.length > 0 && (
+        <div className="space-y-6">
+          {featured.map((item) => (
+            <WeekendFeaturedCard key={item.title} {...item} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
