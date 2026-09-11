@@ -517,8 +517,7 @@ function Index() {
               para celebrarmos juntos.
             </p>
             <p className="mt-2 text-lg leading-relaxed text-muted-foreground">
-              Será um momento de boa comida, brinde e conversa — sem festa com
-              pista de dança. Local e horário em breve.
+              Será um momento de boa comida, brinde e conversa. Local e horário em breve.
             </p>
           </div>
         </div>
