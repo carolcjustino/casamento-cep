@@ -9,7 +9,6 @@ import {
   MapPin,
   Palette,
   ShoppingBag,
-  Sparkles,
   TrainFront,
   Trees,
   UtensilsCrossed,
