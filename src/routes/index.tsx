@@ -236,7 +236,7 @@ function SectionTitle({ title, script }: { title: string; script?: string }) {
       {script && (
         <p className="font-script text-3xl text-primary md:text-4xl">{script}</p>
       )}
-      <h2 className="mt-1 font-title text-2xl font-medium uppercase tracking-[0.2em] text-cafe md:text-3xl">
+      <h2 className="mt-1 font-title text-2xl font-medium tracking-wide text-cafe md:text-3xl">
         {title}
       </h2>
       <div className="mx-auto mt-4 h-px w-24 bg-primary/60" />
