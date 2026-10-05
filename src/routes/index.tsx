@@ -3,6 +3,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import {
   Beer,
   Coffee,
+  Gift,
   Heart,
   Landmark,
   MapPin,
