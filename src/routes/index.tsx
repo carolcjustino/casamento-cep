@@ -19,7 +19,6 @@ import { useEffect, useState } from "react";
 
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
 import igrejaAquarela from "@/assets/aquarela-igreja.png.asset.json";
-import igrejaIlustracao from "@/assets/igreja-ilustracao.png";
 import divisor from "@/assets/separador-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -426,13 +425,6 @@ function Index() {
         <p className="mt-6 text-lg tracking-[0.4em] text-cafe md:text-xl">
           16 . 10 . 2027
         </p>
-        <img
-          src={igrejaIlustracao}
-          alt="Ilustração em gravura da Matriz de Santo Antônio, em Tiradentes"
-          width={1408}
-          height={1008}
-          className="mx-auto mt-10 w-full max-w-2xl [mask-image:radial-gradient(ellipse_75%_80%_at_center,black_60%,transparent_100%)]"
-        />
       </section>
 
       {/* Boas-vindas */}
