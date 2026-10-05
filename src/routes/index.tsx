@@ -3,6 +3,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import {
   Beer,
   Coffee,
+  Gift,
   Heart,
   Landmark,
   MapPin,
@@ -660,6 +661,21 @@ function Index() {
           confirmação de presença — enquanto isso, salvem a data:
         </p>
         <p className="mt-6 font-script text-4xl text-primary md:text-5xl">16 . 10 . 2027</p>
+        <div className="mt-10">
+          <p className="text-lg leading-relaxed text-foreground/90">
+            Para quem quiser nos presentear, nossa lista de presentes está na Wedy:
+          </p>
+          <a
+            href="https://sites.wedy.com/casamento-carolina-e-plinio/lista-de-presentes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-3 rounded-full border border-primary/40 bg-primary px-8 py-3 font-title text-lg text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            <Gift className="h-5 w-5" aria-hidden />
+            Lista de presentes
+          </a>
+          <p className="mt-3 text-sm text-muted-foreground">wedy.com/casamento-carolina-e-plinio</p>
+        </div>
         <img
           src={monograma.url}
           alt="Monograma C&P de Carol e Plínio"
@@ -668,6 +684,7 @@ function Index() {
           height={160}
           className="mx-auto mt-12 w-24"
         />
+
       </section>
 
       {/* Footer */}
