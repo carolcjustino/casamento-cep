@@ -9,7 +9,6 @@ import {
   MapPin,
   Palette,
   ShoppingBag,
-  Sparkles,
   TrainFront,
   Trees,
   UtensilsCrossed,
@@ -523,7 +522,7 @@ function Index() {
           </div>
         </div>
         <p className="mt-8 text-center text-base text-muted-foreground">
-          Pedimos que cheguem com antecedência: a cerimônia começará pontualmente às 16h.
+          Pedimos que cheguem às 15h30: a cerimônia começará pontualmente às 16h.
         </p>
       </section>
 
@@ -564,29 +563,6 @@ function Index() {
             cidade — antes e depois do nosso sim.
           </p>
           <WeekendGuide />
-
-          <div className="relative mx-auto mt-16 max-w-3xl border-y border-primary/50 px-6 py-10 text-center md:px-12">
-            <Sparkles
-              aria-hidden="true"
-              className="mx-auto text-primary"
-              size={24}
-              strokeWidth={1.25}
-            />
-            <p className="mt-3 font-title text-3xl text-cafe">Uma última dica</p>
-            <p className="mt-5 text-xl italic leading-relaxed text-primary">
-              Não tente conhecer tudo.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed text-foreground/90">
-              Tiradentes é uma cidade para andar sem pressa, tomar café demorado,
-              entrar em uma lojinha inesperada, parar para um vinho e observar os
-              casarões.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed text-foreground/90">
-              Aproveitem o fim de semana, porque foi justamente esse clima de
-              história, arte e cidade pequena que fez Tiradentes ser tão especial
-              para nós.
-            </p>
-          </div>
           <Divisor className="mt-14" />
         </div>
       </section>
