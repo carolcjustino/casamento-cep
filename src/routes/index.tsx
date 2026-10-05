@@ -18,7 +18,7 @@ import {
 import { useEffect, useState } from "react";
 
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
-import igrejaFoto from "@/assets/tiradentes.jpg.asset.json";
+import igrejaAquarela from "@/assets/aquarela-igreja.png.asset.json";
 import igrejaIlustracao from "@/assets/igreja-ilustracao.png";
 import divisor from "@/assets/separador-1.png.asset.json";
 
@@ -532,11 +532,11 @@ function Index() {
           <SectionTitle script="Onde tudo acontece" title="Tiradentes" />
           <div className="mt-10 overflow-hidden border border-border">
             <img
-              src={igrejaFoto.url}
-              alt="Vista aérea de Tiradentes ao entardecer, com a Matriz de Santo Antônio iluminada"
+              src={igrejaAquarela.url}
+              alt="Aquarela da Matriz de Santo Antônio em Tiradentes, pintada pelo noivo"
               loading="lazy"
-              width={1920}
-              height={1080}
+              width={1289}
+              height={974}
               className="h-auto w-full object-cover"
             />
           </div>
