@@ -428,8 +428,8 @@ function Index() {
         </nav>
       </header>
 
-      {/* Hero */}
-      <section className="px-4 pt-16 text-center md:pt-24">
+        {/* Hero */}
+        <section className="relative px-4 pb-16 pt-16 text-center md:pb-24 md:pt-24">
         <h1 className="font-title text-5xl leading-tight text-cafe md:text-7xl">
           Carol &amp; Plínio
         </h1>
