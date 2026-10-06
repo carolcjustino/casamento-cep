@@ -433,10 +433,11 @@ function Index() {
         <h1 className="font-title text-5xl leading-tight text-cafe md:text-7xl">
           Carol &amp; Plínio
         </h1>
-        <p className="mt-6 text-lg tracking-[0.4em] text-cafe md:text-xl">
-          16 . 10 . 2027
-        </p>
-      </section>
+          <p className="mt-6 text-lg tracking-[0.4em] text-cafe md:text-xl">
+            16 . 10 . 2027
+          </p>
+        </section>
+      </div>
 
       {/* Boas-vindas */}
       <section id="boas-vindas" className="mx-auto max-w-2xl scroll-mt-8 px-6 py-20 text-center">
