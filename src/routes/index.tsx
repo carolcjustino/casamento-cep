@@ -391,18 +391,8 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background font-serif text-foreground">
-      {/* Topo com aquarela suave ao fundo */}
-      <div className="relative overflow-hidden">
-        <img
-          src={igrejaAquarela.url}
-          alt=""
-          aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.16] mix-blend-multiply"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"
-        />
+      {/* Topo */}
+      <div>
         <header className="relative border-b border-border/70">
         <div className="mx-auto flex max-w-5xl items-center justify-center gap-6 px-4 pt-6">
           <span className="text-xs uppercase tracking-[0.3em] text-cafe">Est</span>
@@ -429,13 +419,25 @@ function Index() {
       </header>
 
         {/* Hero */}
-        <section className="relative px-4 pb-16 pt-16 text-center md:pb-24 md:pt-24">
+        <section className="relative overflow-hidden px-4 pb-16 pt-16 text-center md:pb-24 md:pt-24">
+          <img
+            src={igrejaAquarela.url}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.16] mix-blend-multiply"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"
+          />
+          <div className="relative">
         <h1 className="font-title text-5xl leading-tight text-cafe md:text-7xl">
           Carol &amp; Plínio
         </h1>
-          <p className="mt-6 text-lg tracking-[0.4em] text-cafe md:text-xl">
-            16 . 10 . 2027
-          </p>
+            <p className="mt-6 text-lg tracking-[0.4em] text-cafe md:text-xl">
+              16 . 10 . 2027
+            </p>
+          </div>
         </section>
       </div>
 
@@ -534,16 +536,6 @@ function Index() {
       <section id="tiradentes" className="scroll-mt-8 bg-oliva/10 px-4 py-20">
         <div className="mx-auto max-w-4xl">
           <SectionTitle script="Onde tudo acontece" title="Tiradentes" />
-          <div className="mt-10 overflow-hidden border border-border">
-            <img
-              src={igrejaAquarela.url}
-              alt="Aquarela da Matriz de Santo Antônio em Tiradentes, pintada pelo noivo"
-              loading="lazy"
-              width={1289}
-              height={974}
-              className="h-auto w-full object-cover"
-            />
-          </div>
           <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
             Uma das cidades históricas mais charmosas do Brasil, com suas ruas de
             pedra, casarios coloniais e a majestosa Matriz de Santo Antônio — o lugar
