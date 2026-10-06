@@ -391,8 +391,19 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background font-serif text-foreground">
-      {/* Header */}
-      <header className="border-b border-border">
+      {/* Topo com aquarela suave ao fundo */}
+      <div className="relative overflow-hidden">
+        <img
+          src={igrejaAquarela.url}
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.16] mix-blend-multiply"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"
+        />
+        <header className="relative border-b border-border/70">
         <div className="mx-auto flex max-w-5xl items-center justify-center gap-6 px-4 pt-6">
           <span className="text-xs uppercase tracking-[0.3em] text-cafe">Est</span>
           <img
