@@ -391,8 +391,19 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background font-serif text-foreground">
-      {/* Header */}
-      <header className="border-b border-border">
+      {/* Topo com aquarela suave ao fundo */}
+      <div className="relative overflow-hidden">
+        <img
+          src={igrejaAquarela.url}
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.16] mix-blend-multiply"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"
+        />
+        <header className="relative border-b border-border/70">
         <div className="mx-auto flex max-w-5xl items-center justify-center gap-6 px-4 pt-6">
           <span className="text-xs uppercase tracking-[0.3em] text-cafe">Est</span>
           <img
@@ -417,15 +428,16 @@ function Index() {
         </nav>
       </header>
 
-      {/* Hero */}
-      <section className="px-4 pt-16 text-center md:pt-24">
+        {/* Hero */}
+        <section className="relative px-4 pb-16 pt-16 text-center md:pb-24 md:pt-24">
         <h1 className="font-title text-5xl leading-tight text-cafe md:text-7xl">
           Carol &amp; Plínio
         </h1>
-        <p className="mt-6 text-lg tracking-[0.4em] text-cafe md:text-xl">
-          16 . 10 . 2027
-        </p>
-      </section>
+          <p className="mt-6 text-lg tracking-[0.4em] text-cafe md:text-xl">
+            16 . 10 . 2027
+          </p>
+        </section>
+      </div>
 
       {/* Boas-vindas */}
       <section id="boas-vindas" className="mx-auto max-w-2xl scroll-mt-8 px-6 py-20 text-center">
