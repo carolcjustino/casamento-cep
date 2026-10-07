@@ -537,7 +537,7 @@ function Index() {
       {/* Tiradentes */}
       <section id="tiradentes" className="scroll-mt-8 bg-oliva/10 px-4 pt-20 pb-10">
         <div className="mx-auto max-w-4xl">
-          <SectionTitle script="Onde tudo acontece" title="Tiradentes" />
+          <SectionTitle title="Tiradentes" />
           <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
             Uma das cidades históricas mais charmosas do Brasil, com suas ruas de
             pedra, casarios coloniais e a majestosa Matriz de Santo Antônio — o lugar
