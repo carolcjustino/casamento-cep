@@ -535,7 +535,7 @@ function Index() {
       </section>
 
       {/* Tiradentes */}
-      <section id="tiradentes" className="scroll-mt-8 bg-oliva/10 px-4 py-20">
+      <section id="tiradentes" className="scroll-mt-8 bg-oliva/10 px-4 pt-20 pb-10">
         <div className="mx-auto max-w-4xl">
           <SectionTitle script="Onde tudo acontece" title="Tiradentes" />
           <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
@@ -552,7 +552,7 @@ function Index() {
       {/* Fim de semana */}
       <section
         id="fim-de-semana"
-        className="scroll-mt-8 overflow-hidden px-5 py-20 md:py-24"
+        className="scroll-mt-8 overflow-hidden px-5 pt-10 pb-10 md:pt-12 md:pb-12"
       >
         <div className="mx-auto max-w-5xl">
           <SectionTitle script="Viva a cidade com a gente" title="Um fim de semana em Tiradentes" />
@@ -566,7 +566,7 @@ function Index() {
       </section>
 
       {/* Hospedagem */}
-      <section id="hospedagem" className="mx-auto max-w-3xl scroll-mt-8 px-6 py-20">
+      <section id="hospedagem" className="mx-auto max-w-3xl scroll-mt-8 px-6 pt-10 pb-20">
         <SectionTitle script="Descanso & aconchego" title="Hospedagem" />
         <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
           Tiradentes é cheia de pousadas charmosas no centro histórico. Como outubro
