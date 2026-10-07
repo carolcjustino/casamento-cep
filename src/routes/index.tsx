@@ -419,18 +419,34 @@ function Index() {
       </header>
 
         {/* Hero */}
-        <section className="relative overflow-hidden px-4 pb-16 pt-16 text-center md:pb-24 md:pt-24">
+        <section className="relative overflow-hidden text-center">
           <img
             src={igrejaAquarela.url}
             alt=""
             aria-hidden
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.16] mix-blend-multiply"
+            width={1289}
+            height={974}
+            className="pointer-events-none block h-auto w-full object-contain opacity-60 mix-blend-multiply"
+          />
+          {/* Suavização: topo, laterais e base */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-background/70 to-transparent"
           />
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background to-transparent"
           />
-          <div className="relative">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-background/80 to-transparent"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-background/80 to-transparent"
+          />
+          {/* Conteúdo sobreposto */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 pb-6">
         <h1 className="font-title text-5xl leading-tight text-cafe md:text-7xl">
           Carol &amp; Plínio
         </h1>
