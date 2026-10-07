@@ -464,8 +464,8 @@ function Index() {
           <p>Que bom ter você por aqui! 🤍</p>
           <p>
             A gente adora lugares que têm história para contar — e Tiradentes é
-            assim: uma cidade que sempre foi muito especial para nós e que, de
-            algum jeito, faz parte da nossa história.
+            assim: uma cidade muito especial para nós, que também faz parte da
+            nossa história.
           </p>
           <p>
             Por isso, é lá que vamos escrever o próximo capítulo, cercados pelas
