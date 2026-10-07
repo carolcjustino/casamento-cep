@@ -50,7 +50,6 @@ const WEDDING_DATE = new Date("2027-10-16T16:00:00-03:00");
 const NAV = [
   { label: "Sejam bem-vindos", href: "#boas-vindas" },
   { label: "O Dia", href: "#o-dia" },
-  { label: "Tiradentes", href: "#tiradentes" },
   { label: "Fim de semana", href: "#fim-de-semana" },
   { label: "Hospedagem", href: "#hospedagem" },
   { label: "Dress Code", href: "#dress-code" },
@@ -534,25 +533,11 @@ function Index() {
         </p>
       </section>
 
-      {/* Tiradentes */}
-      <section id="tiradentes" className="scroll-mt-8 bg-oliva/10 px-4 pt-20 pb-10">
-        <div className="mx-auto max-w-4xl">
-          <SectionTitle title="Tiradentes" />
-          <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
-            Uma das cidades históricas mais charmosas do Brasil, com suas ruas de
-            pedra, casarios coloniais e a majestosa Matriz de Santo Antônio — o lugar
-            que escolhemos para dizer "sim". Reservem um tempo para passear pelo
-            centro histórico, visitar os ateliês e saborear a deliciosa cozinha
-            mineira.
-          </p>
-        </div>
-        <Divisor className="mt-14" />
-      </section>
 
       {/* Fim de semana */}
       <section
         id="fim-de-semana"
-        className="scroll-mt-8 overflow-hidden px-5 pt-10 pb-10 md:pt-12 md:pb-12"
+        className="scroll-mt-8 overflow-hidden px-5 pt-20 pb-10 md:pt-24 md:pb-12"
       >
         <div className="mx-auto max-w-5xl">
           <SectionTitle script="Viva a cidade com a gente" title="Um fim de semana em Tiradentes" />
