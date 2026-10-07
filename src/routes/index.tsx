@@ -634,7 +634,7 @@ function Index() {
           Sua presença é o nosso maior presente. Em breve abriremos aqui a
           confirmação de presença — enquanto isso, salvem a data:
         </p>
-        <p className="mt-6 font-script text-4xl text-primary md:text-5xl">16 . 10 . 2027</p>
+        <p className="mt-6 font-serif text-4xl tracking-[0.18em] text-primary md:text-5xl">16 . 10 . 2027</p>
         <div className="mt-10">
           <p className="text-lg leading-relaxed text-foreground/90">
             Para quem quiser nos presentear, nossa lista de presentes está na Wedy:
