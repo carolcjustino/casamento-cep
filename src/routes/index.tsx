@@ -463,30 +463,16 @@ function Index() {
         <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/90 md:text-xl">
           <p>Que bom ter você por aqui! 🤍</p>
           <p>
-            Se tem uma coisa que combina com a nossa história, é gostar de lugares
-            que têm história para contar. A gente gosta de museus, de andar sem
-            pressa por uma cidade nova, de descobrir seus cantinhos e,
-            principalmente, de criar nossas próprias histórias pelo caminho.
+            A gente adora lugares que têm história para contar — e Tiradentes é
+            assim: uma cidade que sempre foi muito especial para nós e que, de
+            algum jeito, faz parte da nossa história.
           </p>
           <p>
-            Por isso, Tiradentes não poderia ser um lugar qualquer para o nosso
-            casamento. É uma cidade que sempre foi muito especial para nós e
-            que, de diferentes formas, faz parte da nossa história.
-          </p>
-          <p>
-            Agora, chegou a vez de escrever mais um capítulo por lá — dessa vez,
-            cercados pelas pessoas que fazem parte da nossa vida e que queremos
-            ter por perto nesse momento tão importante.
-          </p>
-          <p>
-            Por aqui, vamos reunir tudo o que você precisa saber para o nosso
-            grande dia: programação, informações, dicas para aproveitar
-            Tiradentes e, claro, algumas novidades ao longo dessa contagem
-            regressiva.
+            Por isso, é lá que vamos escrever o próximo capítulo, cercados pelas
+            pessoas que queremos por perto. Aqui você encontra a programação, as
+            informações e as dicas para aproveitar o nosso grande dia.
           </p>
           <p className="text-primary">
-            Mal podemos esperar para viver esse dia com vocês.
-            <br />
             Nos vemos em Tiradentes! ✨
           </p>
         </div>
