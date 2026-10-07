@@ -425,7 +425,7 @@ function Index() {
             aria-hidden
             width={1289}
             height={974}
-            className="pointer-events-none block h-auto w-full object-contain opacity-60 mix-blend-multiply"
+            className="pointer-events-none mx-auto block h-auto w-[92%] max-w-2xl object-contain opacity-60 mix-blend-multiply md:max-w-3xl"
           />
           {/* Suavização: topo, laterais e base */}
           <div
