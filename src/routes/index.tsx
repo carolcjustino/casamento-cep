@@ -418,7 +418,7 @@ function Index() {
       </header>
 
         {/* Hero */}
-        <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden text-center md:min-h-[80vh]">
+        <section className="relative flex min-h-[55vh] items-center justify-center overflow-hidden text-center md:min-h-[80vh]">
           <img
             src={igrejaAquarela.url}
             alt=""
@@ -447,7 +447,11 @@ function Index() {
           {/* Halo claro atrás do nome */}
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 h-[45%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-background/55 blur-3xl"
+            className="pointer-events-none absolute inset-0 bg-background/25 md:hidden"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[58%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-background/60 blur-3xl"
           />
           {/* Conteúdo sobreposto */}
           <div className="relative flex flex-col items-center justify-center px-4 py-24">
