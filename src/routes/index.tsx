@@ -18,7 +18,7 @@ import {
 import { useEffect, useState } from "react";
 
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
-import igrejaAquarela from "@/assets/aquarela-igreja.png.asset.json";
+import igrejaAquarela from "@/assets/aquarela-igreja-2.png.asset.json";
 import divisor from "@/assets/separador-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -418,14 +418,14 @@ function Index() {
       </header>
 
         {/* Hero */}
-        <section className="relative overflow-hidden text-center">
+        <section className="relative flex min-h-[55vh] items-center justify-center overflow-hidden text-center md:min-h-[80vh]">
           <img
             src={igrejaAquarela.url}
             alt=""
             aria-hidden
-            width={1289}
-            height={974}
-            className="pointer-events-none mx-auto block h-auto w-[92%] max-w-2xl object-contain opacity-60 mix-blend-multiply md:max-w-3xl"
+            width={1265}
+            height={692}
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-80 mix-blend-multiply"
           />
           {/* Suavização: topo, laterais e base */}
           <div
@@ -444,8 +444,17 @@ function Index() {
             aria-hidden
             className="pointer-events-none absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-background/80 to-transparent"
           />
+          {/* Halo claro atrás do nome */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-background/25 md:hidden"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[58%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-background/60 blur-3xl"
+          />
           {/* Conteúdo sobreposto */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 pb-6">
+          <div className="relative flex flex-col items-center justify-center px-4 py-24">
         <h1 className="font-title text-5xl leading-tight text-cafe md:text-7xl">
           Carol &amp; Plínio
         </h1>
