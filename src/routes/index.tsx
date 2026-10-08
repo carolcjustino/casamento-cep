@@ -18,7 +18,7 @@ import {
 import { useEffect, useState } from "react";
 
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
-import igrejaAquarela from "@/assets/aquarela-igreja.png.asset.json";
+import igrejaAquarela from "@/assets/aquarela-igreja-2.png.asset.json";
 import divisor from "@/assets/separador-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
