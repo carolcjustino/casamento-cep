@@ -18,7 +18,7 @@ import {
 import { useEffect, useState } from "react";
 
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
-import igrejaAquarela from "@/assets/aquarela-igreja-2.png.asset.json";
+import igrejaAquarela from "@/assets/aquarela.webp.asset.json";
 import divisor from "@/assets/separador-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -423,8 +423,8 @@ function Index() {
             src={igrejaAquarela.url}
             alt=""
             aria-hidden
-            width={1265}
-            height={692}
+            width={1920}
+            height={1420}
             className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-80 mix-blend-multiply"
           />
           {/* Suavização: topo, laterais e base */}
