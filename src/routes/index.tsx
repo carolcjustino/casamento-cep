@@ -20,6 +20,7 @@ import { useEffect, useState } from "react";
 
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
 import igrejaAquarela from "@/assets/aquarela.webp.asset.json";
+import casal from "@/assets/casal-carol-plinio.jpg.asset.json";
 import divisor from "@/assets/separador-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -212,6 +213,25 @@ function useCountdown() {
     return () => clearInterval(id);
   }, []);
   return t;
+}
+
+function ThreadMark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 260 32"
+      fill="none"
+      aria-hidden
+      className={`h-8 w-52 max-w-full text-terracota ${className}`}
+    >
+      <path
+        d="M0 16h88c12 0 12-12 22-12s10 12 22 12 12-12 22-12 10 12 22 12h62"
+        stroke="currentColor"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+      />
+      <circle cx="248" cy="16" r="2.5" fill="currentColor" />
+    </svg>
+  );
 }
 
 function Divisor({ className = "" }: { className?: string }) {
