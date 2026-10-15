@@ -593,6 +593,53 @@ function Index() {
         </div>
       </section>
 
+      {/* O fio vermelho */}
+      <section className="mx-auto max-w-5xl scroll-mt-8 px-6 py-20 md:py-24">
+        <div className="grid items-center gap-12 md:grid-cols-[minmax(0,19rem)_minmax(0,1fr)] md:gap-16">
+          <div className="relative mx-auto w-full max-w-[17rem] md:max-w-none">
+            <div
+              aria-hidden
+              className="absolute -inset-3 rounded-t-full border border-primary/40"
+            />
+            <img
+              src={casal.url}
+              alt="Carol e Plínio juntos em frente a um casarão histórico de Tiradentes"
+              loading="lazy"
+              width={1440}
+              height={1920}
+              className="relative aspect-[3/4] w-full rounded-t-full border border-primary/60 object-cover object-top sepia-[0.18] contrast-[1.03] saturate-[0.92]"
+            />
+          </div>
+          <div>
+            <p className="font-script text-3xl text-primary md:text-4xl">
+              O fio vermelho
+            </p>
+            <ThreadMark className="mt-4" />
+            <blockquote className="mt-6 space-y-5 text-lg leading-relaxed text-foreground/90 md:text-xl">
+              <p className="italic">
+                Existe uma lenda japonesa que diz que duas pessoas destinadas a
+                ficarem juntas estão ligadas por um fio vermelho invisível. Ele
+                pode se esticar, se enrolar, atrasar o encontro… mas nunca se
+                rompe.
+              </p>
+              <p className="text-primary md:text-2xl">
+                A gente só se encontra quando é pra ser — no tempo certo, do
+                jeito certo.
+              </p>
+              <p>
+                Às vezes me pergunto quantos caminhos esse fio precisou
+                percorrer até nos unir. Mas a verdade é que, desde que nos
+                encontramos, tudo fez sentido.
+              </p>
+            </blockquote>
+            <div className="mt-8 flex items-center gap-3">
+              <span className="h-px w-10 bg-primary/50" aria-hidden />
+              <Heart className="h-4 w-4 fill-terracota text-terracota" aria-hidden />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* O Dia */}
       <section id="o-dia" className="mx-auto max-w-3xl scroll-mt-8 px-6 pt-20 pb-12">
         <SectionTitle script="O grande dia" title="O Dia" />
