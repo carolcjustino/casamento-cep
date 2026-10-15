@@ -574,7 +574,7 @@ function Index() {
       </section>
 
       {/* O Dia */}
-      <section id="o-dia" className="mx-auto max-w-3xl scroll-mt-8 px-6 py-20">
+      <section id="o-dia" className="mx-auto max-w-3xl scroll-mt-8 px-6 pt-20 pb-12">
         <SectionTitle script="O grande dia" title="O Dia" />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="border border-border bg-card p-8 text-center">
@@ -607,7 +607,7 @@ function Index() {
       {/* Fim de semana */}
       <section
         id="fim-de-semana"
-        className="scroll-mt-8 overflow-hidden px-5 pt-20 pb-10 md:pt-24 md:pb-12"
+        className="scroll-mt-8 overflow-hidden px-5 pt-10 pb-10 md:pt-12 md:pb-12"
       >
         <div className="mx-auto max-w-5xl">
           <SectionTitle script="Viva a cidade com a gente" title="Um fim de semana em Tiradentes" />
