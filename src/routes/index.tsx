@@ -3,6 +3,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import {
   Beer,
   Coffee,
+  ExternalLink,
   Gift,
   Heart,
   Landmark,
@@ -385,6 +386,67 @@ function WeekendGuide() {
   );
 }
 
+type Lodging = {
+  name: string;
+  description: string;
+  url: string;
+  domain: string;
+};
+
+const LODGINGS: Lodging[] = [
+  {
+    name: "Refúgio Tiradentes",
+    description:
+      "Uma opção acolhedora e econômica para aproveitar a cidade.",
+    url: "https://www.refugiotiradentes.com.br/",
+    domain: "refugiotiradentes.com.br",
+  },
+  {
+    name: "Pousada Papyrus",
+    description: "Charme e conforto para quem busca uma experiência especial.",
+    url: "https://www.pousadapapyrus.com.br/",
+    domain: "pousadapapyrus.com.br",
+  },
+  {
+    name: "Villa Alferes",
+    description:
+      "Uma opção com estrutura de lazer, jardins e acomodações diferenciadas.",
+    url: "https://www.villaalferes.com.br/",
+    domain: "villaalferes.com.br",
+  },
+];
+
+function LodgingCard({ lodging, index }: { lodging: Lodging; index: number }) {
+  return (
+    <a
+      href={lodging.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex flex-col gap-4 border border-border bg-background/50 px-6 py-6 transition-colors duration-300 hover:border-primary/60 hover:bg-primary/[0.05] md:flex-row md:items-center md:justify-between md:gap-8"
+    >
+      <div className="flex items-start gap-4">
+        <span className="mt-1.5 font-serif text-sm text-primary/70">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <div>
+          <h3 className="font-title text-2xl text-cafe">{lodging.name}</h3>
+          <p className="mt-1.5 text-base leading-relaxed text-foreground/85">
+            {lodging.description}
+          </p>
+        </div>
+      </div>
+      <span className="inline-flex shrink-0 items-center gap-2 self-start border-b border-primary/40 pb-0.5 text-sm tracking-[0.06em] text-primary md:self-auto">
+        {lodging.domain}
+        <ExternalLink
+          aria-hidden="true"
+          size={14}
+          className="transition-transform duration-300 group-hover:-translate-y-0.5"
+        />
+      </span>
+    </a>
+  );
+}
+
 function Index() {
   const { dias, horas, minutos, segundos } = useCountdown();
 
@@ -562,10 +624,18 @@ function Index() {
       <section id="hospedagem" className="mx-auto max-w-3xl scroll-mt-8 px-6 pt-10 pb-20">
         <SectionTitle script="Descanso & aconchego" title="Hospedagem" />
         <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
-          Tiradentes é cheia de pousadas charmosas no centro histórico. Como outubro
-          é época de alta procura na cidade, recomendamos reservar com antecedência.
-          Em breve publicaremos aqui uma lista de pousadas parceiras com condições
-          especiais para nossos convidados.
+          Selecionamos algumas sugestões de hospedagem em Tiradentes para ajudar
+          vocês a planejar a estadia durante o nosso casamento.
+        </p>
+        <div className="mt-10 space-y-5">
+          {LODGINGS.map((lodging, index) => (
+            <LodgingCard key={lodging.name} lodging={lodging} index={index} />
+          ))}
+        </div>
+        <p className="mx-auto mt-10 max-w-2xl text-center text-base leading-relaxed text-foreground/80">
+          Recomendamos reservar com antecedência e consultar diretamente cada
+          hospedagem para verificar tarifas e disponibilidade para o fim de
+          semana do casamento.
         </p>
       </section>
 
