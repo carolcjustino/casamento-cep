@@ -624,10 +624,18 @@ function Index() {
       <section id="hospedagem" className="mx-auto max-w-3xl scroll-mt-8 px-6 pt-10 pb-20">
         <SectionTitle script="Descanso & aconchego" title="Hospedagem" />
         <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-foreground/90">
-          Tiradentes é cheia de pousadas charmosas no centro histórico. Como outubro
-          é época de alta procura na cidade, recomendamos reservar com antecedência.
-          Em breve publicaremos aqui uma lista de pousadas parceiras com condições
-          especiais para nossos convidados.
+          Selecionamos algumas sugestões de hospedagem em Tiradentes para ajudar
+          vocês a planejar a estadia durante o nosso casamento.
+        </p>
+        <div className="mt-10 space-y-5">
+          {LODGINGS.map((lodging, index) => (
+            <LodgingCard key={lodging.name} lodging={lodging} index={index} />
+          ))}
+        </div>
+        <p className="mx-auto mt-10 max-w-2xl text-center text-base leading-relaxed text-foreground/80">
+          Recomendamos reservar com antecedência e consultar diretamente cada
+          hospedagem para verificar tarifas e disponibilidade para o fim de
+          semana do casamento.
         </p>
       </section>
 
