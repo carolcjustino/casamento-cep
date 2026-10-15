@@ -20,6 +20,7 @@ import { useEffect, useState } from "react";
 
 import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
 import igrejaAquarela from "@/assets/aquarela.webp.asset.json";
+import casal from "@/assets/casal-carol-plinio.jpg.asset.json";
 import divisor from "@/assets/separador-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -212,6 +213,25 @@ function useCountdown() {
     return () => clearInterval(id);
   }, []);
   return t;
+}
+
+function ThreadMark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 260 32"
+      fill="none"
+      aria-hidden
+      className={`h-8 w-52 max-w-full text-terracota ${className}`}
+    >
+      <path
+        d="M0 16h88c12 0 12-12 22-12s10 12 22 12 12-12 22-12 10 12 22 12h62"
+        stroke="currentColor"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+      />
+      <circle cx="248" cy="16" r="2.5" fill="currentColor" />
+    </svg>
+  );
 }
 
 function Divisor({ className = "" }: { className?: string }) {
@@ -569,6 +589,53 @@ function Index() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* O fio vermelho */}
+      <section className="mx-auto max-w-5xl scroll-mt-8 px-6 py-20 md:py-24">
+        <div className="grid items-center gap-12 md:grid-cols-[minmax(0,19rem)_minmax(0,1fr)] md:gap-16">
+          <div className="relative mx-auto w-full max-w-[17rem] md:max-w-none">
+            <div
+              aria-hidden
+              className="absolute -inset-3 rounded-t-full border border-primary/40"
+            />
+            <img
+              src={casal.url}
+              alt="Carol e Plínio juntos em frente a um casarão histórico de Tiradentes"
+              loading="lazy"
+              width={1440}
+              height={1920}
+              className="relative aspect-[3/4] w-full rounded-t-full border border-primary/60 object-cover object-top sepia-[0.18] contrast-[1.03] saturate-[0.92]"
+            />
+          </div>
+          <div>
+            <p className="font-script text-3xl text-primary md:text-4xl">
+              O fio vermelho
+            </p>
+            <ThreadMark className="mt-4" />
+            <blockquote className="mt-6 space-y-5 text-lg leading-relaxed text-foreground/90 md:text-xl">
+              <p className="italic">
+                Existe uma lenda japonesa que diz que duas pessoas destinadas a
+                ficarem juntas estão ligadas por um fio vermelho invisível. Ele
+                pode se esticar, se enrolar, atrasar o encontro… mas nunca se
+                rompe.
+              </p>
+              <p className="text-primary md:text-2xl">
+                A gente só se encontra quando é pra ser — no tempo certo, do
+                jeito certo.
+              </p>
+              <p>
+                Às vezes me pergunto quantos caminhos esse fio precisou
+                percorrer até nos unir. Mas a verdade é que, desde que nos
+                encontramos, tudo fez sentido.
+              </p>
+            </blockquote>
+            <div className="mt-8 flex items-center gap-3">
+              <span className="h-px w-10 bg-primary/50" aria-hidden />
+              <Heart className="h-4 w-4 fill-terracota text-terracota" aria-hidden />
+            </div>
           </div>
         </div>
       </section>
