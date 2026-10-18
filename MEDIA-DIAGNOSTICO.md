@@ -27,9 +27,9 @@ Não há galerias ou fotos externas em uso. Ícones Lucide e o fio vermelho são
 
 ## Inclusão na publicação e limitação
 
-A política deste ambiente mantém as mídias enviadas no CDN em vez de incluir cópias binárias no GitHub. **A inclusão direta dos binários no repositório não foi atendida.** A alternativa implementada é `scripts/prepare-media.mjs`, executado antes de `dev`, `build` e `build:dev`. Ele recupera os cinco originais para `public/images` e `public/fonts`, verifica tamanho e SHA-256 e interrompe a compilação se faltar um original ou se ele estiver diferente. Os caminhos respeitam exatamente maiúsculas e minúsculas.
+A preparação reproduzível é `scripts/prepare-media.mjs`, executado antes de `dev`, `build` e `build:dev`. Ele recupera os cinco originais para `public/images` e `public/fonts`, verifica tamanho e SHA-256 e interrompe a compilação se faltar um original ou se ele estiver diferente. Os caminhos respeitam exatamente maiúsculas e minúsculas.
 
-Scripts, manifesto e caminhos corrigidos ficam no código sincronizado. Os binários gerados são ignorados pelos `.gitignore` dessas duas pastas e incluídos nos arquivos estáticos da publicação pelo Vite. Depois da publicação, o navegador carrega as mídias do próprio site. **Uma nova compilação ainda depende da disponibilidade dos originais no CDN da Lovable.** Não exclua esses assets.
+Scripts, manifesto e caminhos corrigidos ficam no código sincronizado. Foram adicionados `.gitignore` às pastas geradas para respeitar a política de mídias do ambiente. Contudo, a inspeção final com `git ls-files` mostrou que os cinco binários já aparecem no snapshot versionado gerenciado pela plataforma; regras de ignore não removem arquivos já versionados. Não foi possível confirmar o envio desse snapshot ao GitHub. Os arquivos de `public` são incluídos nos estáticos pelo Vite. Depois da publicação, o navegador carrega as mídias do próprio site. Se as cópias locais estiverem presentes e íntegras, não há download; **sem elas, uma nova compilação depende dos originais no CDN da Lovable.** Não exclua esses assets.
 
 Para tornar o repositório completamente independente, copie manualmente os originais para os caminhos acima fora deste ambiente, remova `public/images/.gitignore` e `public/fonts/.gitignore` e inclua os binários no GitHub. O script aceita cópias locais com SHA-256 correto e não tenta baixá-las novamente.
 
@@ -40,3 +40,12 @@ Para tornar o repositório completamente independente, copie manualmente os orig
 3. Republique e abra os cinco novos caminhos da tabela e `/favicon.png` no domínio da Vercel.
 
 Nenhum original necessário está faltando. Não foi fornecida a URL da implantação na Vercel; sua publicação real e configuração não foram verificadas. O servidor atual usa alvo Cloudflare em `vite.config.ts`; o adaptador não foi alterado, pois esta correção é limitada às mídias.
+
+## Verificação realizada
+
+- Recuperação dos cinco originais em uma pasta limpa, com tamanho e SHA-256 corretos.
+- HTTP 200 e conteúdo idêntico ao original nos cinco caminhos novos e no favicon local.
+- Todas as seis ocorrências de imagens carregadas no navegador em computador e celular; TAN Pearl carregada.
+- Capturas confirmaram a aquarela, o monograma e a moldura da foto preservados.
+- Verificação automática do projeto sem erros de compilação no registro consultado.
+- Permanece um aviso preexistente da contagem regressiva ao abrir a página, independente das imagens; não foi alterado nesta correção.
