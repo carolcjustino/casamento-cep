@@ -736,9 +736,20 @@ function Index() {
               a gente.
             </p>
           </div>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-12 text-center">
+            <p className="font-script text-3xl text-primary md:text-4xl">
+              Só para as madrinhas
+            </p>
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Estes tons de amarelo são uma escolha exclusiva das madrinhas — não são a
+              cor oficial do evento. Se você não é madrinha, sinta-se à vontade para
+              escolher a cor que mais gostar.
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             {[
               { classe: "bg-amarelo-manteiga", n: "Manteiga" },
+
               { classe: "bg-amarelo-mel", n: "Mel" },
               { classe: "bg-amarelo-ocre", n: "Ocre" },
               { classe: "bg-amarelo-mostarda", n: "Mostarda" },
@@ -752,8 +763,10 @@ function Index() {
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            Cores das madrinhas — uma seleção de tons de amarelo para celebrar com alegria.
+            Uma seleção de tons de amarelo pensada só para as madrinhas — os demais
+            convidados podem vir da cor que preferirem.
           </p>
+
         </div>
       </section>
 
