@@ -747,9 +747,9 @@ function Index() {
             </p>
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-
             {[
               { classe: "bg-amarelo-manteiga", n: "Manteiga" },
+
               { classe: "bg-amarelo-mel", n: "Mel" },
               { classe: "bg-amarelo-ocre", n: "Ocre" },
               { classe: "bg-amarelo-mostarda", n: "Mostarda" },
