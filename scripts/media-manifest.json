@@ -1,0 +1,27 @@
+[
+  {
+    "pointer": "src/assets/monograma-carol-plinio.png.asset.json",
+    "target": "images/monograma-carol-plinio.png",
+    "sha256": "86a0895dd8e70ad3990f23117876818f716e472a0af39b7575b86d03b3e54491"
+  },
+  {
+    "pointer": "src/assets/aquarela.webp.asset.json",
+    "target": "images/aquarela.webp",
+    "sha256": "12349a92805640dc4dd5b63e0fd22aafc9744b7f59d74bf7d2c20fa737212831"
+  },
+  {
+    "pointer": "src/assets/casal-carol-plinio.jpg.asset.json",
+    "target": "images/casal-carol-plinio.jpg",
+    "sha256": "10b68ab2e8770e0038912a6e95f3621e07131a7695cfda2867f453a936180cd4"
+  },
+  {
+    "pointer": "src/assets/separador-1.png.asset.json",
+    "target": "images/separador-1.webp",
+    "sha256": "3ab581b9162a97e427199af5ae25dcd47d08a9529569ec6c347781a2419ecb88"
+  },
+  {
+    "pointer": "src/assets/tan-pearl.otf.asset.json",
+    "target": "fonts/TAN-PEARL-Regular.otf",
+    "sha256": "daa25d4d2f6692132535c123dfb22d77a50b4b9e970396970a7e353007db2f73"
+  }
+]
