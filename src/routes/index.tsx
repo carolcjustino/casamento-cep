@@ -763,8 +763,10 @@ function Index() {
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            Cores das madrinhas — uma seleção de tons de amarelo para celebrar com alegria.
+            Uma seleção de tons de amarelo pensada só para as madrinhas — os demais
+            convidados podem vir da cor que preferirem.
           </p>
+
         </div>
       </section>
 
