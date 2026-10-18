@@ -18,10 +18,10 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import monograma from "@/assets/monograma-carol-plinio.png.asset.json";
-import igrejaAquarela from "@/assets/aquarela.webp.asset.json";
-import casal from "@/assets/casal-carol-plinio.jpg.asset.json";
-import divisor from "@/assets/separador-1.png.asset.json";
+const monograma = { url: "/images/monograma-carol-plinio.png" };
+const igrejaAquarela = { url: "/images/aquarela.webp" };
+const casal = { url: "/images/casal-carol-plinio.jpg" };
+const divisor = { url: "/images/separador-1.webp" };
 
 export const Route = createFileRoute("/")({
   component: Index,
