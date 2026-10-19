@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as Tabs from "@radix-ui/react-tabs";
 import {
   Beer,
+  CalendarCheck,
   Coffee,
   ExternalLink,
   Gift,
@@ -774,16 +775,30 @@ function Index() {
       <section id="rsvp" className="mx-auto max-w-2xl scroll-mt-8 px-6 py-20 text-center">
         <SectionTitle script="Confirme sua presença" title="RSVP" />
         <p className="mt-8 text-lg leading-relaxed text-foreground/90">
-          Sua presença é o nosso maior presente. Em breve abriremos aqui a
-          confirmação de presença — enquanto isso, salvem a data:
+          Sua presença é o nosso maior presente. Para confirmar, é só preencher o
+          formulário em nosso site — enquanto isso, salvem a data:
         </p>
         <p className="mt-6 font-serif text-4xl tracking-[0.18em] text-primary md:text-5xl">16 . 10 . 2027</p>
         <div className="mt-10">
+          <a
+            href="https://www.casamentocaroleplinio.com.br/confirmacao-de-presenca"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-full border border-primary/40 bg-primary px-8 py-3 font-title text-lg text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            <CalendarCheck className="h-5 w-5" aria-hidden />
+            Confirmar presença
+          </a>
+          <p className="mt-3 text-xs text-muted-foreground">
+            casamentocaroleplinio.com.br/confirmacao-de-presenca
+          </p>
+        </div>
+        <div className="mt-10">
           <p className="text-lg leading-relaxed text-foreground/90">
-            Para quem quiser nos presentear, nossa lista de presentes está na Wedy:
+            Para quem quiser nos presentear, nossa lista de presentes está aqui:
           </p>
           <a
-            href="https://sites.wedy.com/casamento-carolina-e-plinio/lista-de-presentes"
+            href="https://www.casamentocaroleplinio.com.br/lista-de-presentes"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex items-center gap-3 rounded-full border border-primary/40 bg-primary px-8 py-3 font-title text-lg text-primary-foreground transition-colors hover:bg-primary/90"
@@ -791,7 +806,9 @@ function Index() {
             <Gift className="h-5 w-5" aria-hidden />
             Lista de presentes
           </a>
-          <p className="mt-3 text-sm text-muted-foreground">wedy.com/casamento-carolina-e-plinio</p>
+          <p className="mt-3 text-xs text-muted-foreground">
+            casamentocaroleplinio.com.br/lista-de-presentes
+          </p>
         </div>
         <img
           src={monograma.url}

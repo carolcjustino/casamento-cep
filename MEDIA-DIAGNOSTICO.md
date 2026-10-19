@@ -19,7 +19,7 @@ O separador é WebP apesar da extensão `.png` no envio: somente o nome servido 
 
 Os arquivos enviados foram identificados e seus tamanhos e SHA-256 conferidos contra os originais do armazenamento. Existem quatro arquivos de imagem reais e uma fonte preparados em `public`, não apenas referências.
 
-Não há galerias ou fotos externas em uso. Ícones Lucide e o fio vermelho são SVGs produzidos pelo código. Cormorant Garamond e Pinyon Script continuam em Google Fonts (`fonts.googleapis.com` / `fonts.gstatic.com`), sem mudança. Wedy e pousadas são links, não fontes de imagens.
+Não há galerias ou fotos externas em uso. Ícones Lucide e o fio vermelho são SVGs produzidos pelo código. Cormorant Garamond e Pinyon Script continuam em Google Fonts (`fonts.googleapis.com` / `fonts.gstatic.com`), sem mudança. Confirmação de presença, lista de presentes e pousadas são links, não fontes de imagens.
 
 ## Arquivos antigos preservados
 
