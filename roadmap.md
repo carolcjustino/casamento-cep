@@ -10,4 +10,9 @@
 
 - [x] Conferir código, prévia e site publicado: os dois botões já apontam para casamentocaroleplinio.com.br.
 - [x] Testar clique real no site publicado: "Lista de presentes" e "Confirmar presença" abrem os endereços novos.
-- [ ] Confirmar com a usuária que a visualização antiga (print com Wedy) sumiu após atualizar a página.
+- [x] Confirmar com a usuária que a visualização antiga (print com Wedy) sumiu após atualizar a página.
+
+# Enviar a última versão ao GitHub
+
+- [x] Conferir que tudo está guardado: nada pendente, versão mais recente na branch que sincroniza.
+- [ ] Conferir no GitHub que o commit mais recente apareceu — depende da usuária (acesso ao repositório).
