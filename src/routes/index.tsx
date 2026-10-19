@@ -1,3 +1,4 @@
+// Página única do casamento da Carol & Plínio — 16/10/2027, Matriz de Santo Antônio, Tiradentes (MG).
 import { createFileRoute } from "@tanstack/react-router";
 import * as Tabs from "@radix-ui/react-tabs";
 import {
